@@ -1,0 +1,12 @@
+[Unit]
+Description=Dither Camera
+After=network-online.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/top1/camera.py
+WorkingDirectory=/home/top1/
+Restart=always
+User=top1
+
+[Install]
+WantedBy=multi-user.target
